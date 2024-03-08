@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 2px solid #ea1538;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0 0 20px 0 #ea1538;
+}
+
+a{
+  text-decoration: none;
+}
+
+.logo{
+    color: white;
+    font-size: 28px;
+}
+
+.logo span{
+    color: #ea1538;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 10px 8px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #ea1538;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+}
+
+.botao-entrar{
+    border: none;
+    background-color: #fff;
+    border: 1px solid #ea1538;
+    padding: 12px 30px;
+    border-radius: 1rem;
+    color: #ea1538;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.botao-entrar:hover{
+    transform: scale(1.07);
+    background-color: #ea1538;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.separador {
+    width: 10px;
+    height: 1px;
+    margin: 0 1px;
+}
+
+.botao-cadastrar{
+    border: none;
+    background-color: #ea1538;
+    border: 1px solid #fff;
+    padding: 12px 30px;
+    border-radius: 1rem;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.botao-cadastrar:hover{
+    transform: scale(1.07);
+    background-color: #fff;
+    border: 1px solid #ea1538;
+    color: #ea1538;
+    cursor: pointer;
+}
+
+.centralizar{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.container {
+  background-color: rgb(32, 32, 32);
+  padding: 6px;
+  width: 350px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 #ea1538;
+}
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 40px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 7px 0 #ea1538;
+  text-align: center;
+}
+
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+  color: #fff;
+}
+
+.btnColor {
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  background:  #ea1538;
+  border-radius: 30px;
+  transition: .3s;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: #ea1538;
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 1rem;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+button[type="submit"]:hover{
+    transform: scale(1.07);
+    background-color: #fff;
+    border: 1px solid #ea1538;
+    color: #ea1538;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 20px 0 #ea1538;
+}
+
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 1rem;
+  color: #fff;
+}
+
+#signin {
+  left: 25px;
+}
+
+#signup {
+  left: 450px;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  padding: 10px 10px;
+}
+
+.iEmail {
+  top: 40px;
+}
+
+.iPassword {
+  top: 114px;
+}
+
+.iPassword2 {
+  top: 190px;
+}

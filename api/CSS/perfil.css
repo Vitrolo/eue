@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+::-webkit-scrollbar {
+  width: 8px; /* Largura das barras de rolagem */
+}
+
+/* Barra de rolagem vertical */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Cor do indicador de rolagem */
+  border-radius: 4px; /* Raio da borda do indicador de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Cor do indicador de rolagem ao passar o mouse */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    height: 100vh;
+    width: 100vw;
+    scrollbar-width: thin; /* Espessura fina para barras de rolagem */
+    scrollbar-color: transparent transparent;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 2px solid #ea1538;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0 0 15px 0 #ea1538;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    color: white;
+    font-size: 28px;
+}
+
+.logo span{
+    color: #ea1538;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 10px 8px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #ea1538;
+}
+
+
+
+.botoes {
+    display: flex;
+    align-items: center;
+}
+
+.botao-cadastrar{
+    border: none;
+    background-color: #ea1538;
+    border: 1px solid #fff;
+    padding: 12px 30px;
+    border-radius: 1rem;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.botao-cadastrar:hover{
+    transform: scale(1.07);
+    background-color: #fff;
+    border: 1px solid #ea1538;
+    color: #ea1538;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 #ea1538;
+}
+
+.perfil-dropdown{
+    position: relative;
+    width: fit-content;
+}   
+
+.perfil-dropdown-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid #ea1538;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 140px;
+  transition: .4s;
+  font-weight: bold;
+}
+
+.perfil-dropdown-btn:hover{
+  transform: scale(1.07);
+  background-color: #ea1538;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.perfil-dropdown-list{
+  position: absolute;
+  top: 4rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  color: #1a1a1a;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.perfil-dropdown-list.active{
+    max-height: 500px;
+}
+
+
+.perfil-dropdown-list-item{
+    width: 100%;
+    padding: 0.5rem, 0 0.5rem 1rem;
+}
+
+.perfil-dropdown-list-item:hover,
+.perfil-dropdown-list-item:hover i{
+    background-color: #ea1538;
+    color: #ffff;
+}
+
+
+.perfil-dropdown-list-item a i{
+    color: #1a1a1a;
+    font-weight: bold;  
+    font-size: 0.81rem;
+    width: 100%;
+    height: 2.3rem;
+    color: #1a1a1a;
+    line-height: 2.3rem;
+    text-align: center;
+}
+
+.geral{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  width: 25vw;
+  padding: 1rem;
+  color: #fff;
+  background-color: #333;
+  border-radius:  0 0 0.5rem 0.5rem;
+  box-shadow: 0 0 15px 0 #ea1538;
+  margin-bottom: 2.5rem;
+}
+
+.perfil-header {
+  text-align: center;
+}
+
+.imagem-perfil2 img{
+  border-radius: 50%;
+  width: 18rem;
+  height: 18rem;
+  background-size: cover;
+}
+
+.perfil-nome {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-email {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.perfil-info {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.perfil-info-item {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 5px 0 #fff;
+}
+
+.perfil-info-item:hover{
+  background-color: #ea1538;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 #ea1538;
+}
+
+.perfil-info-item h3 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-info-item p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.fav_titulo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.listra{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 10px 0 #e4fa18;
+}
+
+.fav_titulo h1{
+  color: #fff;
+  font-size: 3rem;
+}
+
+.btn-submit {
+  background-color: #ea1538;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.btn-submit:hover {
+  background-color: #fff;
+  color: #ea1538;
+}
+
+.centralizar {
+  width: 100vw;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  
+}    
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border: 1px solid #e4fa18;
+  box-shadow: 0 0 10px 0 #ffff00;
+  text-decoration: none;
+}
+
+.botao-fav {
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; /* Esconde o texto dentro do elemento de âncora */
+  width: 2rem; /* Define a largura do botão igual ao tamanho do ícone de estrela */
+}
+
+.botao-fav i {
+  font-size: 2rem; /* Define o tamanho do ícone de estrela */
+  color: #ccc;
+}
+
+.botao-fav.favoritada i {
+  color: yellow;
+}
+
+.card:hover,
+.card:hover h1,
+.card:hover h2,
+.card:hover p{
+  cursor: pointer;
+  color: #1a1a1a;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.card h1 {
+  font-size: 3rem;
+  color: #ffff00;
+  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  /* Limita o número máximo de linhas a serem exibidas */
+  overflow: hidden;
+  /* Adiciona reticências para indicar que o texto foi cortado */
+  text-overflow: ellipsis;
+  /* Define como o texto deve ser tratado quando ultrapassar o tamanho do contêiner */
+  white-space: nowrap;
+  /* Define a altura máxima que o texto pode ter antes de ser cortado */
+  max-height: 3.6em;
+
+}
+
+.card img{
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2{
+  color: #fff;
+}
+
+
+.card p {
+  font-size: 14px;
+  margin-bottom:  0.5rem;
+  /* Limita o número máximo de linhas a serem exibidas */
+  overflow: hidden;
+  /* Adiciona reticências para indicar que o texto foi cortado */
+  text-overflow: ellipsis;
+  /* Define como o texto deve ser tratado quando ultrapassar o tamanho do contêiner */
+  white-space: nowrap;
+  /* Define a altura máxima que o texto pode ter antes de ser cortado */
+  max-height: 3.6em;
+  color: #fff;
+}
