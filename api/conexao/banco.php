@@ -1,7 +1,7 @@
 <?php
 
     if (!class_exists('Database')) {
-        class Database{
+        class DataBase{
 
             private $host = "mysql";
             private $database = "culinary_hub";
