@@ -1,6 +1,6 @@
 <?php
 
-include('../conexao/banco.php');
+include('./conexao/banco.php');
 
 $db = new DataBase();
 
