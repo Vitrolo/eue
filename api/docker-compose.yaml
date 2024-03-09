@@ -32,3 +32,4 @@ services:
       - "3306:3306"
     volumes:
       - C:/Users/Aluno/Desktop/hum/mysql_data:/var/lib/mysql
+    command: --bind-address=0.0.0.0
